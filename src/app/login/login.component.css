@@ -1,0 +1,122 @@
+.login-header {
+    width: 100%;
+	/* UI Properties */
+    background-color: #FFFFFF;
+    overflow: hidden;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 0px #0000001A;
+    opacity: 1;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #1f0f31c7;
+}
+
+.active {
+    background-color: #1f0f31c9;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px;
+
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.loginImg {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 60%;
+    height: auto;
+    position: relative;
+    top: 50%;
+    margin: auto;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    padding: 25px 22px;
+    height: auto;
+}
+
+.innerForm {
+    padding: 25px 0px 0px 0px;
+    /* border-left: 5px solid tomato; */
+}
+
+.help-block {
+    color: red;
+}
+
+.formBorder, .btnBorder {
+    padding-left: 15px;
+    border-left: 5px solid tomato;
+}
+
+input[type=text],[type=password] {
+    width: 95%;
+    padding: 10px 0px 10px 0px;
+    border: none;
+    border-bottom: 2px solid grey;
+}
+
+.btn {
+    background-color: #1f0f31c9;
+    border: none;
+    color: white;
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 18px 2px;
+    border-radius: 40px;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}

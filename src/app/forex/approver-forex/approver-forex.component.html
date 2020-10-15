@@ -1,0 +1,28 @@
+<div class="dashboar-container">
+    <div class="dashboard-heading">
+        <h3>UNDER APPROVAL</h3>
+    </div>
+    <div class="table">
+        <div class="tableBody">
+            <div class="tableRow tableHead">
+                <div class="tableCell">COUNTRY</div>
+                <div class="tableCell">CURRENCY</div>
+                <div class="tableCell">BUY RATE</div>
+                <div class="tableCell">SELL RATE</div>
+                <div class="tableCell">ACTION</div>
+
+            </div>
+            <div class="tableRow"  *ngFor="let item of Value; index as i">
+                <div class="tableCell">{{item[0]}}</div>
+                <div class="tableCell">{{item[1]}}</div>
+                <div class="tableCell">{{item[2]}}</div>
+                <div class="tableCell">{{item[3]}}</div>
+                <div class="tableCell">
+                    <button class="approve-btn" (click)="approveRecord(i)"> &#10003; Approve</button>
+                    <button class="reject-btn" (click)="rejectRecord(i)"> &#10007;  Reject</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+</div>

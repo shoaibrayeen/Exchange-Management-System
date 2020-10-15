@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-container {
+    width: 100vw;
+    height: 30vh;
+    background: #ffffff;
+    flex-wrap: wrap;
+    display: grid;
+    place-items: center;
+}
+
+.dashboard-heading {
+	display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px;
+    text-align: left;
+    font: normal normal normal 20px/25px Tondo;
+    letter-spacing: 0px;
+    color: #1C293B;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.table{
+    border: 1px solid #999999;
+	display: table;
+	width: 100%;
+}
+
+.tableRow {
+	display: table-row;
+	text-align: center;
+}
+
+.tableHead {
+	color: rgb(163, 159, 159);
+}
+
+.tableCell {
+	border-bottom: 1px solid #999999;
+	display: table-cell;
+	padding: 12px;
+	width: 20px;
+}
+
+.tableBody {
+	display: table-row-group;
+}
+
+.Successful {
+	color: green;
+}
+
+.Failure {
+	color: red;
+}
+
+
+.formTable {
+    border: 0px solid #999999;
+	display: table;
+    width: 100%;
+}
+
+.formTableRow {
+	display: table-row;
+	text-align: center;
+}
+
+.formTableHead {
+    color: rgba(7, 5, 5, 0.801);
+    text-transform: uppercase;
+}
+
+.formTableCell {
+	border-bottom: 0px solid #999999;
+	display: table-cell;
+	padding: 10px;
+	width: 20px;
+}
+
+
+.formTableBody {
+	display: table-row-group;
+}
+.btn {
+    background-color: #1f0f31c9;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 18px 2px;
+    border-radius: 40px;
+}
+
+input[type=text] {
+    width: 95%;
+    padding: 10px 0px 10px 0px;
+    border: none;
+    border-bottom: 1px solid grey;
+}

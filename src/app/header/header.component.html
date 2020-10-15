@@ -1,0 +1,11 @@
+<div class="topnav">
+    <img class="login-header" src="./assets/images/icon.svg" />
+    <div class="topnav-right">
+      <a href="/dashboard">Dashboard</a>
+      <a *ngIf= "!isApprover" href="/account">My Account</a>
+      <a href="/forex">Forex Management</a>
+      <a href="/report">Report</a>
+      <button class="header-button" (click)="logout()">Logout</button>
+    </div>
+</div>
+  

@@ -1,0 +1,61 @@
+<app-header></app-header>
+<div class="dashboard-container">
+    <div class="dashboard-heading">
+        <h3>TRANSACTION DETAILS</h3>
+    </div>
+    <div class="formTable">
+        <div class="formTableBody">
+            <div class="formTableRow formTableHead">
+                <div class="formTableCell">Search</div>
+                <div class="formTableCell">Sender’s Country</div>
+                <div class="formTableCell">Receiver’s Country</div>
+
+            </div>
+            <form [formGroup]="searchForm" class="formTableRow" (ngSubmit)="searchRecord()">
+                <div class="formTableCell">
+                    <input type="text" placeholder="Kenya" formControlName="search"><br><br>
+                </div>
+                <div class="formTableCell">
+                    <input type="text" placeholder="Kenyan Shilling" formControlName="sender_country"><br><br>
+                </div>
+                <div class="formTableCell">
+                    <input type="text" placeholder="131.12" formControlName="receiver_country"><br><br>
+                </div>
+                <div class="formTableCell">
+                    <button class="btn">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="table">
+        <div class="tableBody">
+            <div class="tableRow tableHead">
+                <div class="tableCell">TRANSACTION ID</div>
+                <div class="tableCell">DATE AND TIME</div>
+                <div class="tableCell">SENDER'S COUNTRY NAME</div>
+                <div class="tableCell">SENT AMOUNT</div>
+                <div class="tableCell">SELL RATE</div>
+                <div class="tableCell">RECEIVER'S COUNTRY NAME</div>
+                <div class="tableCell">RECEIVED AMOUNT</div>
+                <div class="tableCell">BUY RATE</div>
+                <div class="tableCell">CF-CONVERSION FACTOR</div>
+                <div class="tableCell">STATUS</div>
+            </div>
+            <div class="tableRow" *ngFor="let item of Value">
+                <div class="tableCell">{{item[0]}}</div>
+                <div class="tableCell">{{item[1]}}</div>
+                <div class="tableCell">{{item[2]}}</div>
+                <div class="tableCell">{{item[3]}}</div>
+                <div class="tableCell">{{item[4]}}</div>
+                <div class="tableCell">{{item[5]}}</div>
+                <div class="tableCell">{{item[6]}}</div>
+                <div class="tableCell">{{item[7]}}</div>
+                <div class="tableCell">{{item[8]}}</div>
+                <div class="tableCell {{item[9]}}">{{item[9]}}</div>
+            </div>
+        </div>
+    </div><br><br><br>
+</div>
+
+
+<app-footer></app-footer>

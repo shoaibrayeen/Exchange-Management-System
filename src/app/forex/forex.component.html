@@ -1,0 +1,9 @@
+<app-header></app-header>
+<app-overview></app-overview>
+    <div *ngIf="isApprover">
+        <app-approver-forex></app-approver-forex>
+    </div>
+    <div *ngIf="!isApprover">
+        <app-initiator-forex></app-initiator-forex>    
+    </div>
+<app-footer></app-footer>
