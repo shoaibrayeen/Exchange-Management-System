@@ -1,0 +1,73 @@
+<div class="login-header">
+  <img class="login-wrapper__svg" src="./assets/images/icon.svg" />
+</div>
+
+<div class="row">
+  <div class="column">
+      <img class="loginImg" src="./assets/images/homepage1.svg" alt="loginImg" />
+  </div>
+  <div class="column">
+      <!-- login form start -->
+      <div class="card">
+          <div class="container">
+              <h2 style="margin-bottom: 15px;">LOGIN</h2>
+              <p>Enter your credentials to access.</p>
+              <form [formGroup]="loginForm" class="login-container" (ngSubmit)="login()">
+                  <div class="innerForm">
+                      <div class="formBorder">
+                          <label for="mobile">AUUID</label><br><br>
+                          <p [ngClass]="{ 'has-error': isSubmitted && formControls.auuid.errors }">
+                            <input type="text" placeholder="13219790" formControlName="auuid"><br><br>
+                          </p>
+                      
+                          <div *ngIf="isSubmitted && formControls.auuid.errors" class="help-block">
+                            <div *ngIf="formControls.auuid.errors.required"><b>AUUID is required.</b></div>
+                          </div><br><br>
+
+                          <label for="password">PASSWORD</label><br><br>
+                          <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+                            <input type="password" placeholder="*************" formControlName="password"><br><br>
+                          </p>
+                      
+                          <div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+                            <div *ngIf="formControls.password.errors.required"><b>Password is required.</b></div>
+                          </div><br><br>
+                      </div>
+                      <div class="btnBorder">
+                          <!-- input type="submit" value="Log in" -->
+                          <button class="btn">Login</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+      <!-- login form end -->
+  </div>
+</div>
+<app-footer></app-footer>
+
+<!-- div class="login">
+  <h2 class="login-header">Log in</h2>
+  <form [formGroup]="loginForm" class="login-container" (ngSubmit)="login()">
+
+    <p [ngClass]="{ 'has-error': isSubmitted && formControls.auuid.errors }">
+      <input type="auuid" placeholder="AUUID" formControlName="auuid">
+    </p>
+
+    <div *ngIf="isSubmitted && formControls.auuid.errors" class="help-block">
+      <div *ngIf="formControls.auuid.errors.required">AUUID is required</div>
+    </div>
+
+    <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+      <input type="password" placeholder="Password" formControlName="password">
+    </p>
+
+    <div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+      <div *ngIf="formControls.password.errors.required">Password is required</div>
+    </div>
+
+    <p>
+      <input type="submit" value="Log in">
+    </p>
+  </form>
+</div-->

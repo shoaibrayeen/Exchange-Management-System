@@ -1,0 +1,61 @@
+.login-header {
+    top: 18px;
+    left: 53px;
+    width: 102px;
+    height: 33px;
+    /* UI Properties */
+    opacity: 1;
+  }
+  
+  .topnav {
+      background-color: #FFFFFF;
+      overflow: hidden;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      box-shadow: 0px 2px 8px #0000001A;
+      opacity: 1;
+  }
+  
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #4D4F5C;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font: normal normal normal 15px/20px Lato;
+    letter-spacing: 0px;
+    color: #4D4F5C;
+    opacity: 1;
+  }
+  
+  .topnav button {
+    float: left;
+    color: #4D4F5C;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font: normal normal normal 15px/20px Lato;
+    letter-spacing: 0px;
+    color: #4D4F5C;
+    opacity: 1;
+  }
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #FFFFFF;
+    color: black;
+  }
+  
+  
+  
+  /* Right-aligned section inside the top navigation */
+  .topnav-right {
+    float: right;
+  }
+
+  .header-button {
+    background-color: white;
+    border: none;
+  }
+
+  

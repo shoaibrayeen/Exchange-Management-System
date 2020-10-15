@@ -1,0 +1,60 @@
+<app-header></app-header>
+<div class="report-container">
+    <div class="blocks">
+        <div class="report-heading">
+            <h2>GENERATING REPORT</h2>
+        </div>
+        <div class="formTable">
+            <div class="formTableBody">
+                <div class="formTableRow formTableHead">
+                    <div class="formTableCell">From</div>
+                    <div class="formTableCell">To</div>
+                    <div class="formTableCell">Sender’s Country</div>
+                    <div class="formTableCell">Receiver’s Country</div>
+                    <div class="formTableCell">Timezone</div>
+                </div>
+                <form [formGroup]="reportForm" class="formTableRow" (ngSubmit)="generateReport()">
+                    <div class="formTableCell">
+                        <input type="date" formControlName="from"><br><br>
+                    </div>
+                    <div class="formTableCell">
+                        <input type="date" formControlName="to"><br><br>
+                    </div>
+                    <div class="formTableCell">
+                        <select formControlName="sender_country">
+                            <option  value="" disabled selected>Enter Country</option>
+                            <option  value="Kenya">Kenya</option>
+                            <option  value="Uganda">Uganda</option>
+                            <option  value="Malawi">Malawi</option>
+                            <option  value="Zambia">Zambia</option>
+                            <option  value="Tanzania">Tanzania</option>
+                            <option  value="Rwanda">Rwanda</option>
+                        </select>
+                    </div>
+                    <div class="formTableCell">
+                        <select formControlName="receiver_country">
+                            <option  value="" disabled selected>Enter Country</option>
+                            <option  value="Kenya">Kenya</option>
+                            <option  value="Uganda">Uganda</option>
+                            <option  value="Malawi">Malawi</option>
+                            <option  value="Zambia">Zambia</option>
+                            <option  value="Tanzania">Tanzania</option>
+                            <option  value="Rwanda">Rwanda</option>
+                        </select>
+                    </div>
+                    <div class="formTableCell">
+                        <input type="radio" formControlName="timezone" value="local_time_zone">Local time zone
+                        <input type="radio" formControlName="timezone" value="utc_time_zone">UTC time zone
+                    </div>
+                    <div class="formTableCell">
+                        <button class="btn">Generate Report</button>
+                    </div>
+                </form>
+            </div>
+        </div><br><br>
+        <div class="success-message" *ngIf="showMessage">
+            <h3>Report downloaded successfully.</h3>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
