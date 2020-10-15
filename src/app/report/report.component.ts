@@ -34,5 +34,7 @@ export class ReportComponent implements OnInit {
     }
     console.log(this.reportForm.value);
     this.showMessage = true;
+    alert('Response is submitted');
+    this.reportForm.reset();
   }
 }

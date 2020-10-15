@@ -37,7 +37,8 @@ export class DashboardComponent implements OnInit {
       return;
     }
     console.log(this.searchForm.value)
-    
+    alert('Response is submitted');
+    this.searchForm.reset();
   }
   
 }
